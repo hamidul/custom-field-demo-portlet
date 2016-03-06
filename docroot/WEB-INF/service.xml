@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.proliferay.sbuilder.example.custom.field">
+	<author>Hamidul Islam</author>
+	<namespace>CUSTOMFIELD</namespace>
+	<entity name="Book" table="CUSTOMFILELD_DEMO_PORTLET" local-service="true" remote-service="true">
+		<column name="bookId" type="long" primary="true" id-type="increment"/>
+		<column name="bookName" type="String" />
+		<column name="description" type="String" />
+		<column name="authorName" type="String" />
+		<column name="isbn" type="int" />
+		<column name="price" type="int" />
+		
+		<reference package-path="com.liferay.portlet.expando" entity="ExpandoValue" />
+		<reference package-path="com.liferay.portlet.expando" entity="ExpandoRow" />
+		<reference package-path="com.liferay.portlet.expando" entity="ExpandoTable" />
+		<reference package-path="com.liferay.portal" entity="ClassName" />
+	</entity>
+	
+	
+</service-builder>
